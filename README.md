@@ -152,4 +152,5 @@ Feedstock Maintainers
 
 * [@cmichelenstrofer](https://github.com/cmichelenstrofer/)
 * [@michaelcdevin](https://github.com/michaelcdevin/)
+* [@ryancoe](https://github.com/ryancoe/)
 

@@ -1,17 +1,17 @@
-{% set name = "wecopttool" %}
-{% set version = "2.0.1a1" %}
+{% set name = 'wecopttool' %}
+{% set version = '2.1.0' %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/15/7d/b41cfbc33cee3938eeb8a5a309f5e6295c851123251ed8fb1787cc3a1e31/wecopttool-2.0.1a1.tar.gz
-  sha256: 7b6a7e86d1d89cab056670f8c330d6bd13815b76004c40915e27e43d376a294d
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5671f6983c6671d12c7bf974daf111bfa3b4efb862b3903ce2508ce729c00df2
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -20,15 +20,13 @@ requirements:
   run:
     - python >=3.8,<3.11
     - pip
-    - numpy >=1.20
+    - numpy >=1.20,<1.24
     - scipy
-    - capytaine ==1.4.0
-    - wavespectra
-    - meshio
     - xarray
     - autograd
-    - jupyter
+    - capytaine ==1.4.2
     - joblib
+    - wavespectra
     
 test:
   imports:
