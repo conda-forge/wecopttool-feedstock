@@ -1,9 +1,9 @@
 {% set pyproject = load_file_data('pyproject.toml') %}
 {% set proj = pyproject.get('project') %}
-{% set name = proj.get('name') %}
+{% set name = 'wecopttool' %}
 {% set version = proj.get('version') %}
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
