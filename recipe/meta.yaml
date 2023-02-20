@@ -1,12 +1,12 @@
 {% set name = 'wecopttool' %}
-{% set version = '2.1.0' %}
+{% set version = '2.2.0' %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5671f6983c6671d12c7bf974daf111bfa3b4efb862b3903ce2508ce729c00df2
+  sha256: 75862918a8765348f67ced3d07c9b76dadb9a569a30aa447f4de36095e957ea0
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
   run:
     - python >=3.8,<3.11
     - pip
-    - numpy >=1.20,<1.24
+    - numpy >=1.20
     - scipy
     - xarray
     - autograd
