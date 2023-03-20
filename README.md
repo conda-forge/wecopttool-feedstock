@@ -1,11 +1,11 @@
-About wecopttool
-================
+About wecopttool-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wecopttool-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/SNL-WaterPower/WecOptTool
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wecopttool-feedstock/blob/main/LICENSE.txt)
 
 Summary: WEC Design Optimization Toolbox
 
