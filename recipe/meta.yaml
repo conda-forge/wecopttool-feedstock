@@ -1,12 +1,12 @@
-{% set name = 'wecopttool' %}
-{% set version = '2.2.0' %}
+{% set name = "wecopttool" %}
+{% set version = "2.2.2" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 75862918a8765348f67ced3d07c9b76dadb9a569a30aa447f4de36095e957ea0
+  sha256: b34faa34e0540de4ded91b26248e13293149e2cb4a2e76a750fefc9f28e1a574
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - capytaine ==1.4.2
     - joblib
     - wavespectra
-    
+
 test:
   imports:
     - wecopttool
