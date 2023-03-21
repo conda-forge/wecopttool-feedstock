@@ -11,7 +11,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
     - scipy
     - xarray
     - autograd
-    - capytaine ==1.4.2
+    - capytaine
     - joblib
     - wavespectra
 
