@@ -26,7 +26,7 @@ requirements:
     - autograd
     - capytaine
     - joblib
-    - wavespectra
+    - wavespectra >=3.13
 
 test:
   imports:
