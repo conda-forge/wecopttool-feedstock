@@ -11,7 +11,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -26,7 +26,7 @@ requirements:
     - autograd
     - capytaine
     - joblib
-    - wavespectra
+    - wavespectra >=3.13
 
 test:
   imports:
