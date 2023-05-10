@@ -3,13 +3,13 @@ About wecopttool-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wecopttool-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/SNL-WaterPower/WecOptTool
+Home: https://github.com/sandialabs/WecOptTool
 
 Package license: GPL-3.0-only
 
 Summary: WEC Design Optimization Toolbox
 
-Documentation: https://snl-waterpower.github.io/WecOptTool
+Documentation: https://sandialabs.github.io/WecOptTool
 
 The Wave Energy Converter Design Optimization Toolbox (WecOptTool)
 allows users to perform wave energy converter (WEC) device design
