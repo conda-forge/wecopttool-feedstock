@@ -37,7 +37,7 @@ test:
     - pip check
 
 about:
-  home: https://github.com/SNL-WaterPower/WecOptTool
+  home: https://github.com/sandialabs/WecOptTool
   summary: WEC Design Optimization Toolbox
   description: |
     The Wave Energy Converter Design Optimization Toolbox (WecOptTool)
@@ -46,7 +46,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL3
   license_file: LICENSE
-  doc_url: https://snl-waterpower.github.io/WecOptTool
+  doc_url: https://sandialabs.github.io/WecOptTool
 
 extra:
   recipe-maintainers:
