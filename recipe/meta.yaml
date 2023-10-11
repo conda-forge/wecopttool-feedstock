@@ -11,14 +11,14 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - pip
   run:
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - pip
     - numpy >=1.20
     - scipy
