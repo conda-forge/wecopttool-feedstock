@@ -27,6 +27,7 @@ requirements:
     - capytaine
     - joblib
     - wavespectra >=3.13
+    - netcdf4
 
 test:
   imports:
