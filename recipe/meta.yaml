@@ -1,17 +1,17 @@
 {% set name = "wecopttool" %}
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 900c081ac22e78a7a3660ce2d9d40020e00bde0a53f701cf2b754234e7d0365e
+  sha256: 64613ce9e67271fef629a50a422bc43a502c92c788314c50ceba4e2fe0b76d15
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -26,7 +26,7 @@ requirements:
     - autograd
     - capytaine
     - joblib
-    - wavespectra >=3.13
+    - wavespectra >=3.13,<3.15
     - netcdf4
 
 test:
