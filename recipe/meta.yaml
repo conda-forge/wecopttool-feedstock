@@ -26,7 +26,7 @@ requirements:
     - autograd
     - capytaine
     - joblib
-    - wavespectra >=3.13
+    - wavespectra >=3.13,<3.15
     - netcdf4
 
 test:
