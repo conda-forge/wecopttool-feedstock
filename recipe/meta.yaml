@@ -11,7 +11,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -20,13 +20,13 @@ requirements:
   run:
     - python >=3.8,<3.12
     - pip
-    - numpy >=1.20
+    - numpy >=1.20,<2.0
     - scipy
     - xarray
     - autograd
     - capytaine
     - joblib
-    - wavespectra >=3.13,<3.15
+    - wavespectra >=3.13
     - netcdf4
 
 test:
