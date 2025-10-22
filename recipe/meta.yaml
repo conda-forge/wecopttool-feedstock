@@ -1,12 +1,12 @@
 {% set name = "wecopttool" %}
-{% set version = "3.1.1" %}
+{% set version = "3.2.0" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 767270d4dc8ae0ea7b80329b15f0c05f8b24fb249b0d61d812e2d1ce0bb01771
+  sha256: 730fc4e55de9b6911305ff587d9b0b5a08cb1373e8c681120b9647e803a43c2d
 
 build:
   noarch: python
