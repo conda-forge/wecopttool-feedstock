@@ -1,5 +1,5 @@
 {% set name = "wecopttool" %}
-{% set version = "3.1.1" %}
+{% set version = "3.2.0" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -24,7 +24,7 @@ requirements:
     - numpy >=1.20,<2.0
     - scipy
     - xarray
-    - autograd
+    - jax
     - capytaine
     - joblib
     - wavespectra >=3.13
@@ -56,3 +56,4 @@ extra:
     - rgcoe
     - cmichelenstrofer
     - michaelcdevin
+    - jtgrasb
