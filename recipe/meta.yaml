@@ -21,7 +21,7 @@ requirements:
   run:
     - python >={{ python_min }},<3.12
     - pip
-    - numpy >=1.20,<2.0
+    - numpy >=1.20
     - scipy
     - xarray
     - jax
