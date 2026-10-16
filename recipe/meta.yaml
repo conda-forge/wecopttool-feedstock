@@ -1,5 +1,6 @@
 {% set name = "wecopttool" %}
 {% set version = "3.3.0" %}
+{% set python_min = "3.11" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,7 +12,9 @@ source:
 build:
   noarch: python
   script:
-    - sed -i 's/pym4e==2.1.1/pym4e>=2.0.0,<3/g' pyproject.toml
+    # Relax upstream PyPI metadata because conda-forge currently has pym4e 2.0.0,
+    # while upstream wecopttool 3.3.0 pins pym4e==2.1.1.
+    - sed -i 's/pym4e==2.1.1/pym4e>=2.0.0,<2.2/g' pyproject.toml 
     - {{ PYTHON }} -m pip install . -vv
   number: 0
 
@@ -31,7 +34,7 @@ requirements:
     - joblib
     - wavespectra >=4.0
     - netcdf4
-    - pym4e >=2.0.0,<3
+    - pym4e >=2.0.0,<2.2
 
 test:
   imports:
