@@ -12,6 +12,7 @@ source:
 build:
   noarch: python
   script:
+    - sed -i 's/pym4e==2.1.1/pym4e>=2.0.0,<3/g' pyproject.toml
     - {{ PYTHON }} -m pip install . -vv
   number: 0
 
