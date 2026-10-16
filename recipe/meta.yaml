@@ -1,16 +1,21 @@
 {% set name = "wecopttool" %}
-{% set version = "3.2.1" %}
+{% set version = "3.3.0" %}
+{% set python_min = "3.11" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1fcf33cdf6c15515a752021cdbaf2adabbc71c33ce078ac8f8e48bc290896231
+  sha256: f88d483aee87d9cdecb0227dff899d35644a33ec0e9672996d6efb0ad8201c9f
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    # Relax upstream PyPI metadata because conda-forge currently has pym4e 2.0.0,
+    # while upstream wecopttool 3.3.0 pins pym4e==2.1.1.
+    - sed -i 's/pym4e==2.1.1/pym4e>=2.0.0,<2.2/g' pyproject.toml 
+    - {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
@@ -19,16 +24,17 @@ requirements:
     - setuptools
     - pip
   run:
-    - python >={{ python_min }},<3.12
+    - python >={{ python_min }},<3.13
     - pip
     - numpy >=1.20
     - scipy
     - xarray
     - jax
-    - capytaine
+    - capytaine ==2.3.1
     - joblib
-    - wavespectra >=3.13
+    - wavespectra >=4.0
     - netcdf4
+    - pym4e >=2.0.0,<2.2
 
 test:
   imports:
