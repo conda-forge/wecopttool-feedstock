@@ -11,7 +11,8 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    - {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
@@ -30,7 +31,7 @@ requirements:
     - joblib
     - wavespectra >=4.0
     - netcdf4
-    - pym4e ==2.0.0
+    - pym4e >=2.0.0,<3
 
 test:
   imports:
